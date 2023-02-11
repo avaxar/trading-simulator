@@ -24,7 +24,7 @@ clock = pygame.time.Clock()
 
 balance = 1000000
 assets = [
-    # The hile names are ambigious, as we don't want the participants to know
+    # The file names are ambigious, as we don't want the participants to know
     # which stock/crypto they're trading with.
     Asset("AAPL", AssetType.STOCK, utils.DIR / "assets" / "A.npz"),
     Asset("AMZN", AssetType.STOCK, utils.DIR / "assets" / "B.npz"),

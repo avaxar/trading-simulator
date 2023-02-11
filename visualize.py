@@ -10,8 +10,6 @@ from src.chart import Chart
 
 
 assets = [
-    # The hile names are ambigious, as we don't want the participants to know
-    # which stock/crypto they're trading with.
     Asset("AAPL", AssetType.STOCK, utils.DIR / "assets" / "A.npz"),
     Asset("AMZN", AssetType.STOCK, utils.DIR / "assets" / "B.npz"),
     Asset("META", AssetType.STOCK, utils.DIR / "assets" / "C.npz"),
@@ -110,7 +108,7 @@ for asset in assets:
                 )
                 chart.surface.blit(
                     text := utils.SMALL_FONT.render(
-                        f"{'BELI' if entry['action'] == 'buy' else 'JUAL'} {entry['amount']}",
+                        f"{'BUY' if entry['action'] == 'buy' else 'SELL'} {entry['amount']}",
                         True,
                         (0, 128, 0, 128)
                         if entry["action"] == "buy"
